@@ -35,6 +35,9 @@ const vue_app = new Vue({
             movies: []
 
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
+			title: 
+			owner:
+			github:
       },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
