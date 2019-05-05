@@ -90,6 +90,26 @@ const vue_app = new Vue({
               return Math.floor(minutes / 60) + 'h ' + minutes % 60 + 'm';
           },
 		  
+		  /*Increment Likes by one*/
+		  like: function(index){
+              this.movies[index].likes += 1;
+          },
+		  
+		  /*Increment Dislikes by one*/
+          dislike: function(index){
+              this.movies[index].dislikes += 1;
+          },
+		  
+		  /*shows which poster you are currently on eg. 1 of 3*/
+		  posterClick: function(index) {
+              if (this.movies[index].posterindex < (this.movies[index].posters.length - 1)){
+                  this.movies[index].posterindex += 1;
+              }
+              else{
+                  this.movies[index].posterindex = 0;
+              }
+          }
+		  
       }
 })
 	
