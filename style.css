@@ -21,6 +21,8 @@ body {
 .main {
     background-color: #f2f2f2;
     padding: 40px 0;
+	column-count: 2;
+
 }
 
 /* This stylizes the poster area and poster images */
@@ -77,6 +79,8 @@ body {
     position: absolute;
     top: 50px;
     right: 25px;
+	border-radius: 50%;
+
 }
 
 /* This contains your like and dislike buttons */
@@ -119,6 +123,30 @@ body {
 }
 
 /* ADD YOUR LIKE AND DISLIKE HOVER/MOUSEOVER CSS CODE HERE */
+
+.likes {
+    background-color: #008700;
+    color: #ffffff;
+    transition: all 500ms ease;
+}
+
+.dislikes {
+    background-color: #f65a5b;
+    color: #ffffff;
+    transition: all 500ms ease;
+}
+
+.likes:hover {
+    background-color: #9edd87;
+    color: #008700;
+    transition: all 500ms ease;
+}
+
+.dislikes:hover {
+    background-color: #fdd6d6;
+    color: #F65A5B;
+    transition: all 500ms ease;
+}
 
 
 
