@@ -32,21 +32,19 @@ const vue_app = new Vue({
       },
       data: {
             // This holds your movies.json data.
-            movies: [],
+			movies: [],
 
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
 			title: "IMDB + Meet's Top 8 Movies",
 			owner: "Meet",
-			github: "https://github.com/MeetRami"
+			github: "https://github.com/MeetRami/IS219VueP3"
       },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
-			
-			/*This function will put date in a format we want*/
-			getMonthText: function(dateArray){
+          getMonthText: function(dateArray){
               let year = dateArray[0];
               let month = dateArray[1];
-			  let date = dateArray[2];
+			  let day = dateArray[2];
               switch(month){
                   case 1:
                       month = 'January';
@@ -86,12 +84,13 @@ const vue_app = new Vue({
               }
               return ''.concat(month, ' ', day, ', ', year);
           },
+		  
 		  timeText: function(minutes){
               return Math.floor(minutes / 60) + 'h ' + minutes % 60 + 'm';
           },
-		  
+          
 		  /*Increment Likes by one*/
-		  like: function(index){
+          like: function(index){
               this.movies[index].likes += 1;
           },
 		  
@@ -108,8 +107,8 @@ const vue_app = new Vue({
               else{
                   this.movies[index].posterindex = 0;
               }
-          }
-		  
+		  }
+
       }
 })
 	
