@@ -35,9 +35,9 @@ const vue_app = new Vue({
             movies: []
 
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
-			title: 
-			owner:
-			github:
+			title: IMDB + Meet’s Top 8 Movies
+			owner: Meet
+			github: https://github.com/MeetRami
       },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
