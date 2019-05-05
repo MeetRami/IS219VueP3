@@ -22,12 +22,12 @@
 </head>
 
   <body>
-	<div class="container">
+	<div class="container" id="vue_app">
 
 	    <div class="header">
 		    
-	      <div class="container">
-	        <h1 id="app_title">%title%</h1>
+	      <div class="container" id="vue_app">
+	        <h1 id="app_title">{{title}}</h1>
 	      </div>
 	      
 	    </div>
@@ -35,23 +35,24 @@
 
 	    <div class="main">
 
-	      <div class="container">
+	      <div class="container" v-for="(movie, index) in movies"  :key="index">
 
 	        <div class="col-md-6"> 
 	            <div class="thumbnail">
 
-						<img class="poster"  />
-						<div class="imageInfo">%posterindex%</div>
+						<img class="poster" v-bind:src="movie.posters[movie.posterindex]" @click="posterClick(index)"/>
+						<!-- Here we're doing "{{ movie.posterindex + 1 }} so it shows 1 of 3 not 0 of 3 -->
+						<div class="imageInfo" v-model.number="movie.posterindex">{{ movie.posterindex + 1 }} of {{ movies[index].posters.length }}</div>
 						
-						<p class="title">%title% (%country%)</p> 
-						<p class="score"><i class="fa fa-star" aria-hidden="true"></i> %iscore% </p>
-						<p class="runtime">Runtime: %runtime%</p> 
-						<p class="released">Released: %released% | Rated: %rating%</p>
-						<p class="websites">Websites: <a>%imdb%</a> | <a>%website%</a></p>
+						<p class="title">{{ movie.title }} {{ movie.country }}</p> 
+						<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{ movie.iscore }} </p>
+						<p class="runtime" v-bind:value="movie.runtime"> Runtime: {{ timeText(movie.runtime) }}</p> 
+						<p class="released" v-bind:value="movie.released[index]">Released: {{ getMonthText(movie.released) }} | Rated: {{ movie.rating }}</p>
+						<p class="websites">Websites: <a>{{ movie.imdb }}</a> | <a>{{ movie.website }}</a></p>
 						
 			            <div class="social">
-			              <p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> %likes%</p>
-			              <p class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i> %dislikes%</p>
+			              <p class="likes" v-bind:src="movie.likes" @click="like(index)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{ movie.likes }}</p>
+			              <p class="dislikes" v-bind:src="movie.disables" @click="dislike(index)"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{ movie.dislikes }}</p>
 			            </div>
 	            </div> 
 	        </div>
@@ -61,8 +62,8 @@
 
 	    <div class="footer">
 	      <div class="container">
-			<a id="github" class="btn btn-lg btn-warning">
-				<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i>%owner% %github%
+			<a id="github" class="btn btn-lg btn-warning" v-bind:href="github">
+				<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i> {{ owner }}
 	  		</a>
 	      </div>
 	    </div>
@@ -70,7 +71,6 @@
   
   	<!-- This load the Vue.js code -->
 	<script type="text/javascript" src="site.js"></script>
-	 
   
 </body>
 </html>
