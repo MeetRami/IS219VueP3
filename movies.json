@@ -91,7 +91,7 @@
             "runtime": 130,
             "released": [2011, 7, 15],
             "country": "USA",
-            "posters": ["img/harryPotter.jpg"],
+            "posters": ["img/harryPotter.jpg", "img/harryPotter2.jpg"],
             "imdb": "https://www.imdb.com/title/tt1201607/",
             "website": "https://www.youtube.com/watch?v=mObK5XD8udk",
             "likes": 955,
@@ -107,9 +107,9 @@
             "country": "USA",
             "posters": ["img/blackPanther.jpg", "img/blackPanther2.jpg"],
             "imdb": "https://www.imdb.com/title/tt1825683/",
-            "website": "https://www.facebook.com/thegodfather",
-            "likes": 928,
-            "dislikes": 109,
+            "website": "https://twitter.com/theblackpanther?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+            "likes": 1028,
+            "dislikes": 259,
             "posterindex": 0
       },
 ]
