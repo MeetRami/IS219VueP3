@@ -1,5 +1,6 @@
 [
-      {
+      {/*1*/
+	  
             "title": "The Shawshank Redemption",
             "iscore": 9.3,
             "rating": "R",
@@ -13,7 +14,7 @@
             "dislikes": 122,
             "posterindex": 0
       },
-      {
+      {/*2*/
             "title": "The Godfather",
             "iscore": 9.2,
             "rating": "R",
@@ -27,7 +28,7 @@
             "dislikes": 109,
             "posterindex": 0
       },
-      {
+      {/*3*/
             "title": "The Godfather: Part II",
             "iscore": 9.0,
             "rating": "R",
@@ -41,7 +42,7 @@
             "dislikes": 99,
             "posterindex": 0
       },
-      {
+      {/*4*/
             "title": "The Dark Knight",
             "iscore": 8.9,
             "rating": "PG-13",
@@ -55,7 +56,7 @@
             "dislikes": 127,
             "posterindex": 0
       },
-      {
+      {/*5*/
             "title": "Schindler's List",
             "iscore": 8.9,
             "rating": "R",
@@ -68,5 +69,47 @@
             "likes": 812,
             "dislikes": 101,
             "posterindex": 0
-      }
+      },
+	  {/*6*/
+            "title": "Avengers Endgame",
+            "iscore": 8.9,
+            "rating": "PG-13",
+            "runtime": 181,
+            "released": [2019, 4, 26],
+            "country": "USA",
+            "posters": ["img/endgame1.jpg", "img/endgame2.jpg", "img/endgame3.jpg"],
+            "imdb": "https://www.imdb.com/title/tt4154796/",
+            "website": "https://www.marvel.com/movies/avengers-endgame",
+            "likes": 1928,
+            "dislikes": 109,
+            "posterindex": 0
+      },
+	  {/*7*/
+            "title": "Harry Potter and the Deathly Hallows - Part 2",
+            "iscore": 8.1,
+            "rating": "PG-13",
+            "runtime": 130,
+            "released": [2011, 7, 15],
+            "country": "USA",
+            "posters": ["img/harryPotter.jpg"],
+            "imdb": "https://www.imdb.com/title/tt1201607/",
+            "website": "https://www.youtube.com/watch?v=mObK5XD8udk",
+            "likes": 955,
+            "dislikes": 121,
+            "posterindex": 0
+      },
+	  {/*8*/
+            "title": "Black Panther",
+            "iscore": 7.3,
+            "rating": "PG-13",
+            "runtime": 135,
+            "released": [2018, 2, 16],
+            "country": "USA",
+            "posters": ["img/blackPanther.jpg", "img/blackPanther2.jpg"],
+            "imdb": "https://www.imdb.com/title/tt1825683/",
+            "website": "https://www.facebook.com/thegodfather",
+            "likes": 928,
+            "dislikes": 109,
+            "posterindex": 0
+      },
 ]
